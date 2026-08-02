@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
-import WhatIBuild from "@/components/home/WhatIBuild";
+import WhatIBuild from "@/src/components/home/WhatIBuild";
 import FeaturedProject from "@/components/home/FeaturedProject";
 
 export default function Home() {
