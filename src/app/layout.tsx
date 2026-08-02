@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Immtrl Dragon — Product Builder",
   description:
-    "A product builder portfolio documenting products, engineering, architecture, and AI-assisted development.",
+    "A product builder portfolio documenting software products, engineering, architecture, and AI-assisted development.",
 };
 
 export default function RootLayout({
