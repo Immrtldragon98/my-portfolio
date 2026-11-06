@@ -1,0 +1,3 @@
+import Link from "next/link";
+import type { Project } from "@/data/projects";
+export default function ProjectList({items}:{items:Project[]}) { return <div className="mt-14 grid gap-5 md:grid-cols-2">{items.map(p=><Link href={`/projects/${p.slug}`} key={p.slug} className="group flex flex-col border border-black/15 p-6 transition-colors hover:bg-black/5 sm:p-8"><p className="font-mono text-xs uppercase tracking-wider text-black/60">{p.category} · {p.status}</p><h2 className="mt-5 text-3xl font-medium tracking-tight">{p.title}</h2><p className="mt-4 flex-1 leading-relaxed text-black/70">{p.summary}</p><span className="mt-8 text-sm underline underline-offset-4">View project →</span></Link>)}</div>; }

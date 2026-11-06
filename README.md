@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Logan — engineering and product portfolio
 
-## Getting Started
+Next.js 16 / React 19 portfolio connecting mechanical maintenance, commissioning, trading tools and applied AI.
 
-First, run the development server:
+## Run and validate
 
-```bash
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npx tsc --noEmit
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The active App Router is `app/` with root `components/` and `data/`. The older `src/` scaffold is unused; do not edit it to change the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`data/projects.ts` is the shared catalog for project lists and case studies. Software summaries use repository material plus the owner's project history. Industrial entries are owner-reported experience. Status labels distinguish active builds, prototypes, concepts and reported implementations. A repository feature does not establish a verified production release. Never publish credentials, private conversations or unverified performance claims.
 
-## Learn More
+Project detail pages live at `/projects/[slug]`; `/projects/market-memory` retains its original URL. Legacy upcoming URLs redirect to current project pages.
 
-To learn more about Next.js, take a look at the following resources:
+## November 2026 review
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fixed an outdated single-project catalog, unsupported completed labels, generic GitHub URLs, placeholder contact email, missing industrial experience, stale Genetic Playground positioning and an empty screenshot panel. Added eight project summaries, shared detail rendering, updated profile and metadata, keyboard focus, skip navigation and reduced-motion support.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Remaining: replace the unused `src/` scaffold in a separate cleanup; collect real product screenshots; verify current public deployment and product flows before labeling them live or production ready. No measured business impact, clinical validity or trading performance is inferred.

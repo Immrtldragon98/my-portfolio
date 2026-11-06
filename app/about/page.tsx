@@ -34,21 +34,15 @@ export default function AboutPage() {
 
             <div className="max-w-3xl space-y-8 text-xl leading-relaxed text-black/60">
               <p>
-                I come from a mechanical engineering background and have always
-                been curious about how things work—whether that means physical
-                systems, software, products, or the ideas behind them.
+                I am V. Yadhu Vamshi Sukumar, also known as Logan—a mechanical engineering graduate and Assistant Manager at Vedanta Limited, with nearly two years of experience in industrial maintenance.
               </p>
 
               <p>
-                My journey into software has been driven primarily by building.
-                Instead of learning technologies in isolation, I try to
-                understand them by creating something real with them.
+                My work spans wire rod mill maintenance, breakdown troubleshooting, SAP PM/MM and AO Work Management in CAIM. I am coordinating contractors, permits and mechanical interfaces for a 15 TPH wire rod mill commissioning project.
               </p>
 
               <p>
-                This portfolio is a record of that process: the products I
-                have built, the systems I have designed, the ideas I am
-                exploring, and the lessons I pick up along the way.
+                Alongside maintenance, I build software through AI-assisted iteration: Market Memory Pro, HumanOS, Hypeframe and MiniMe Lab. I am developing my C++, Python and AI/ML skills toward reliable trading and industrial software systems.
               </p>
             </div>
           </div>
@@ -113,10 +107,10 @@ export default function AboutPage() {
 
             <div className="grid gap-6 sm:grid-cols-2">
               {[
-                "Product Design",
-                "Frontend Development",
-                "Backend Systems",
-                "System Architecture",
+                "Maintenance & Equipment Reliability",
+                "SAP PM / MM & CAIM",
+                "Python & Backend Systems",
+                "C++ & Quant Systems — Learning",
                 "AI-Assisted Development",
                 "Learning by Building",
               ].map((skill) => (
@@ -145,10 +139,10 @@ export default function AboutPage() {
               </h2>
 
               <a
-                href="mailto:your@email.com"
+                href="https://github.com/logan9e7"
                 className="shrink-0 border-b border-black pb-2 text-sm"
               >
-                Get in touch →
+                Find me on GitHub ↗
               </a>
             </div>
           </div>

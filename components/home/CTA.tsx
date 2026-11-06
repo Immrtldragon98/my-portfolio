@@ -6,7 +6,7 @@ export default function CTA() {
       <Container>
         <div className="border-t border-black/10 pt-12">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">
-            Let's Connect
+            Let’s Connect
           </p>
 
           <div className="mt-8 flex flex-col justify-between gap-12 md:flex-row md:items-end">
@@ -15,10 +15,10 @@ export default function CTA() {
             </h2>
 
             <a
-              href="mailto:your@email.com"
+              href="https://github.com/logan9e7"
               className="shrink-0 border-b border-black pb-2 text-sm"
             >
-              Get in touch →
+              Find me on GitHub ↗
             </a>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em]">
-              Immtrl Dragon
+              Logan / Immtrl Dragon
             </p>
 
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-black/50">
@@ -33,7 +33,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-black/10 pt-6">
           <p className="font-mono text-xs uppercase tracking-widest text-black/40">
-            © 2026 Immtrl Dragon
+            © 2026 Logan / Immtrl Dragon
           </p>
         </div>
       </Container>

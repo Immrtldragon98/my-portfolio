@@ -19,7 +19,7 @@ export default function Navbar() {
           href="/"
           className="text-sm font-semibold uppercase tracking-[0.2em]"
         >
-          Immtrl Dragon
+          Logan / Immtrl Dragon
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -34,7 +34,7 @@ export default function Navbar() {
           ))}
 
           <a
-            href="https://github.com"
+            href="https://github.com/logan9e7"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm transition-opacity hover:opacity-50"
@@ -69,7 +69,7 @@ export default function Navbar() {
             ))}
 
             <a
-              href="https://github.com"
+              href="https://github.com/logan9e7"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg"

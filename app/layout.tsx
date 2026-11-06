@@ -13,9 +13,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Immtrl Dragon — Product Builder",
+  title: "Logan — Mechanical Engineer & Product Builder",
   description:
-    "A product builder portfolio documenting products, engineering, architecture, and AI-assisted development.",
+    "Logan’s journey from mechanical maintenance and mill commissioning to trading tools, applied AI and software products.",
 };
 
 export default function RootLayout({
@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-24 focus:z-50 focus:bg-white focus:p-3">Skip to content</a>
         {children}
       </body>
     </html>
