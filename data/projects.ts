@@ -114,47 +114,6 @@ export const projects: Project[] = [
     "repo": "https://github.com/Immrtldragon98/Asset_tracking_intelligence"
   },
   {
-    "slug": "wrm4",
-    "title": "15 TPH Wire Rod Mill Commissioning",
-    "category": "Mechanical engineering",
-    "status": "In progress · reported work",
-    "summary": "Coordinating mechanical execution, contractors, permits and interfaces for WRM #4 commissioning.",
-    "stack": [
-      "Execution planning",
-      "PTW / LOTO",
-      "Contractor coordination",
-      "SAP PM / MM"
-    ],
-    "problem": "Commissioning requires equipment installation, shared utilities and multiple teams to progress in a controlled sequence.",
-    "work": [
-      "Coordinating mechanical, operations, electrical and contractor interfaces.",
-      "Developed a 60–90 day execution plan with dependencies, manpower and inspection hold points.",
-      "Prioritized coiler readiness, including fleeter replacement and gearbox work."
-    ],
-    "lesson": "Sequence, access and readiness matter as much as individual task completion.",
-    "next": "Continue installation and inspection against the approved execution sequence; commissioning completion is not claimed."
-  },
-  {
-    "slug": "main-shear",
-    "title": "Main Shear Base Modification",
-    "category": "Maintenance improvement",
-    "status": "Implemented · reported work",
-    "summary": "A base modification designed around the existing EOT crane to remove dependence on Hydra availability.",
-    "stack": [
-      "Mechanical design",
-      "Maintainability",
-      "Lifting access"
-    ],
-    "problem": "Main shear assembly and disassembly depended on an external Hydra, creating availability and scheduling constraints.",
-    "work": [
-      "Reworked the base concept to enable handling with the existing EOT crane.",
-      "Addressed crane dependency, maintenance access and manpower requirements.",
-      "Identified potential replication across other wire rod mill lines."
-    ],
-    "lesson": "Designing for maintenance access can improve both execution and scheduling.",
-    "next": "Validate the targeted maintenance-time reduction from 7 to 4 hours and line-by-line replication. Targets are not presented as measured savings."
-  },
-  {
     "slug": "dot-space",
     "title": "Dot Space",
     "category": "Product exploration",
