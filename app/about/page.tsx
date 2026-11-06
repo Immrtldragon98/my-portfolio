@@ -1,155 +1,68 @@
-import Container from "@/components/layout/Container";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
-export default function AboutPage() {
+import Button from "@/components/ui/Button";
+export const metadata = {
+  title: "About — Logan",
+  description:
+    "Logan’s journey building software, trading tools and applied AI experiments.",
+};
+export default function About() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
-
-      <section className="border-b border-black/10 px-6 pb-32 pt-40 lg:px-10">
-        <Container>
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">
-            About
+    <main id="main-content" className="page-shell page-content">
+      <div className="page-intro">
+        <p className="eyebrow">About Logan</p>
+        <h1>
+          Learn by building.
+          <br />
+          <span>Improve by doing.</span>
+        </h1>
+        <p>
+          I’m V. Yadhu Vamshi Sukumar, also known as Logan. I’m developing my
+          software skills through real products, with a focus on backend
+          systems, applied AI and trading tools.
+        </p>
+      </div>
+      <div className="about-grid">
+        <section>
+          <h2>A journey through projects</h2>
+          <p>
+            Market Memory Pro started with a practical need: keep market
+            observations, decisions and lessons together. HumanOS explores
+            conversational memory and evidence. Hypeframe and MiniMe Lab let me
+            work on discovery, interaction and educational experiences.
           </p>
-
-          <h1 className="mt-8 max-w-6xl text-6xl font-medium leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-[9rem]">
-            I am interested
-            <br />
-            in building things
-            <br />
-            that matter.
-          </h1>
-        </Container>
+          <p>
+            I use AI tools throughout development while learning to examine the
+            architecture, validate behavior and understand the code behind each
+            feature.
+          </p>
+          <Button href="/projects" secondary>
+            Explore my work →
+          </Button>
+        </section>
+        <section className="skills-panel">
+          <p className="eyebrow">Developing through practice</p>
+          {[
+            "Python & FastAPI backends",
+            "TypeScript & React interfaces",
+            "C++ calculation modules",
+            "Data modeling & API design",
+            "Applied ML & structured AI output",
+            "Testing, debugging & deployment",
+          ].map((s) => (
+            <div className="skill-row" key={s}>
+              {s}
+            </div>
+          ))}
+        </section>
+      </div>
+      <section className="direction-panel">
+        <p className="eyebrow">The direction</p>
+        <h2>Go deeper, one working system at a time.</h2>
+        <p>
+          My next focus is stronger C++ and Python foundations, reliable AI
+          workflows, and the mathematics behind quantitative systems. This
+          portfolio documents that learning journey.
+        </p>
       </section>
-
-      <section className="border-b border-black/10 py-32">
-        <Container>
-          <div className="grid gap-16 lg:grid-cols-[0.5fr_1.5fr]">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">
-                My Background
-              </p>
-            </div>
-
-            <div className="max-w-3xl space-y-8 text-xl leading-relaxed text-black/60">
-              <p>
-                I am V. Yadhu Vamshi Sukumar, also known as Logan—a mechanical engineering graduate and Assistant Manager at Vedanta Limited, with nearly two years of experience in industrial maintenance.
-              </p>
-
-              <p>
-                My work spans wire rod mill maintenance, breakdown troubleshooting, SAP PM/MM and AO Work Management in CAIM. I am coordinating contractors, permits and mechanical interfaces for a 15 TPH wire rod mill commissioning project.
-              </p>
-
-              <p>
-                Alongside maintenance, I build software through AI-assisted iteration: Market Memory Pro, HumanOS, Hypeframe and MiniMe Lab. I am developing my C++, Python and AI/ML skills toward reliable trading and industrial software systems.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-b border-black/10 py-32">
-        <Container>
-          <div className="grid gap-16 lg:grid-cols-[0.5fr_1.5fr]">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">
-                How I Learn
-              </p>
-            </div>
-
-            <div>
-              <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-6xl">
-                I learn by going from curiosity to implementation.
-              </h2>
-
-              <div className="mt-16 grid gap-px bg-black/10 sm:grid-cols-2">
-                {[
-                  {
-                    title: "Understand",
-                    text: "I break down a problem until I understand what I am actually trying to solve.",
-                  },
-                  {
-                    title: "Explore",
-                    text: "I read, research, experiment, and study existing systems and approaches.",
-                  },
-                  {
-                    title: "Build",
-                    text: "I turn what I learn into something tangible that I can test and improve.",
-                  },
-                  {
-                    title: "Reflect",
-                    text: "I look at what worked, what failed, and what I would change in the next version.",
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="bg-[#f5f4ef] p-8">
-                    <h3 className="text-2xl font-medium">{item.title}</h3>
-
-                    <p className="mt-4 leading-relaxed text-black/50">
-                      {item.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-b border-black/10 py-32">
-        <Container>
-          <div className="grid gap-16 lg:grid-cols-[0.5fr_1.5fr]">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">
-                Current Focus
-              </p>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2">
-              {[
-                "Maintenance & Equipment Reliability",
-                "SAP PM / MM & CAIM",
-                "Python & Backend Systems",
-                "C++ & Quant Systems — Learning",
-                "AI-Assisted Development",
-                "Learning by Building",
-              ].map((skill) => (
-                <div
-                  key={skill}
-                  className="border-t border-black/10 py-5 text-xl"
-                >
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-32">
-        <Container>
-          <div className="border-t border-black/10 pt-12">
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">
-              Currently
-            </p>
-
-            <div className="mt-8 flex flex-col justify-between gap-10 md:flex-row md:items-end">
-              <h2 className="max-w-4xl text-5xl font-medium leading-[0.95] tracking-[-0.05em] sm:text-7xl">
-                Building, learning, and figuring out what comes next.
-              </h2>
-
-              <a
-                href="https://github.com/logan9e7"
-                className="shrink-0 border-b border-black pb-2 text-sm"
-              >
-                Find me on GitHub ↗
-              </a>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <Footer />
     </main>
   );
 }

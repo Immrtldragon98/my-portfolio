@@ -1,21 +1,63 @@
 import Link from "next/link";
-import Container from "@/components/layout/Container";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Button from "@/components/ui/Button";
 import type { Project } from "@/data/projects";
 export default function ProjectDetail({ project: p }: { project: Project }) {
- return <main id="main-content"><Navbar/><section className="pb-24 pt-36 sm:pt-44"><Container>
- <Link href="/projects" className="text-sm underline underline-offset-4">← All projects</Link>
- <p className="mt-12 font-mono text-xs uppercase tracking-widest text-black/60">{p.category} · {p.status}</p>
- <h1 className="mt-6 max-w-5xl text-5xl font-medium tracking-tight sm:text-7xl">{p.title}</h1>
- <p className="mt-8 max-w-3xl text-xl leading-relaxed text-black/70">{p.summary}</p>
- <div className="mt-8 flex flex-wrap gap-2">{p.stack.map(t=><span key={t} className="border border-black/20 px-3 py-2 text-sm">{t}</span>)}</div>
- <div className="mt-16 grid gap-12 border-t border-black/15 pt-10 md:grid-cols-2">
- <div><h2 className="text-2xl font-medium">The problem</h2><p className="mt-4 leading-relaxed text-black/70">{p.problem}</p></div>
- <div><h2 className="text-2xl font-medium">My work</h2><ul className="mt-4 list-disc space-y-3 pl-5 text-black/70">{p.work.map(w=><li key={w}>{w}</li>)}</ul></div>
- <div><h2 className="text-2xl font-medium">What I learned</h2><p className="mt-4 leading-relaxed text-black/70">{p.lesson}</p></div>
- <div><h2 className="text-2xl font-medium">Next milestone</h2><p className="mt-4 leading-relaxed text-black/70">{p.next}</p></div></div>
- {p.repo && <a href={p.repo} className="mt-12 inline-block border-b border-black pb-2">Explore source on GitHub ↗</a>}
- <p className="mt-12 max-w-3xl text-sm leading-relaxed text-black/60">Updated November 2026. Software summaries reflect repository material and project history; current production behavior has not been independently verified. Industrial work is described from my reported experience.</p>
- </Container></section><Footer/></main>;
+  return (
+    <main id="main-content" className="page-shell page-content">
+      <Link href="/projects" className="text-action">
+        ← All projects
+      </Link>
+      <div className="page-intro detail-intro">
+        <p className="eyebrow">
+          {p.category} · {p.status}
+        </p>
+        <h1>{p.title}</h1>
+        <p>{p.summary}</p>
+        <div className="tech-list">
+          {p.stack.map((t) => (
+            <span key={t}>{t}</span>
+          ))}
+        </div>
+        {p.repo && (
+          <div className="button-row">
+            <Button href={p.repo}>Explore source ↗</Button>
+          </div>
+        )}
+      </div>
+      <div className="detail-grid">
+        <section>
+          <p className="eyebrow">01 / Context</p>
+          <h2>The problem</h2>
+          <p>{p.problem}</p>
+        </section>
+        <section>
+          <p className="eyebrow">02 / Implementation</p>
+          <h2>My work</h2>
+          <ul>
+            {p.work.map((w) => (
+              <li key={w}>{w}</li>
+            ))}
+          </ul>
+        </section>
+        <section>
+          <p className="eyebrow">03 / Reflection</p>
+          <h2>What I learned</h2>
+          <p>{p.lesson}</p>
+        </section>
+        <section>
+          <p className="eyebrow">04 / Next</p>
+          <h2>The next milestone</h2>
+          <p>{p.next}</p>
+        </section>
+      </div>
+      <p className="detail-note">
+        Updated November 2026. Summaries reflect repository material and project
+        history. Current production behavior has not been independently
+        verified.
+      </p>
+      <Button href="/projects" secondary>
+        Back to projects →
+      </Button>
+    </main>
+  );
 }

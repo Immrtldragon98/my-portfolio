@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,9 +15,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Logan — Mechanical Engineer & Product Builder",
+  title: "Logan — Developer & Product Builder",
   description:
-    "Logan’s journey from mechanical maintenance and mill commissioning to trading tools, applied AI and software products.",
+    "Logan’s software projects, applied AI experiments and trading tools. A journey of learning through building.",
 };
 
 export default function RootLayout({
@@ -28,8 +30,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-24 focus:z-50 focus:bg-white focus:p-3">Skip to content</a>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:p-3"
+        >
+          Skip to content
+        </a>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

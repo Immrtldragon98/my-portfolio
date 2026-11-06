@@ -1,27 +1,29 @@
-# Logan — engineering and product portfolio
+# Logan — software portfolio
 
-Next.js 16 / React 19 portfolio connecting mechanical maintenance, commissioning, trading tools and applied AI.
+Next.js 16 / React 19 portfolio for web applications, applied AI experiments and trading tools.
 
-## Run and validate
+## Development
 
 ```sh
 npm ci
-npm run dev
+npm run dev -- --hostname 127.0.0.1
 npm run lint
 npx tsc --noEmit
 npm run build
 ```
 
-The active App Router is `app/` with root `components/` and `data/`. The older `src/` scaffold is unused; do not edit it to change the site.
+## Structure
 
-## Content
+- `app/`: Home, Projects, About and project detail routes.
+- `data/projects.ts`: the shared software-project catalog.
+- `components/layout/`: one global navigation and footer.
+- `components/project/`: filter controls, cards and case-study layout.
+- `components/ui/Button.tsx`: shared primary and secondary link actions.
 
-`data/projects.ts` is the shared catalog for project lists and case studies. Software summaries use repository material plus the owner's project history. Industrial entries are owner-reported experience. Status labels distinguish active builds, prototypes, concepts and reported implementations. A repository feature does not establish a verified production release. Never publish credentials, private conversations or unverified performance claims.
+Project filters are native toggle buttons with announced result counts. Navigation identifies the current page; mobile navigation exposes its expanded state. Keyboard focus, skip navigation and reduced-motion support are included. Legacy upcoming links redirect to current project pages.
 
-Project detail pages live at `/projects/[slug]`; `/projects/market-memory` retains its original URL. Legacy upcoming URLs redirect to current project pages.
+Unused `src/` app, empty components, template assets, directory dump and unused animation dependency were removed. Do not reintroduce a second App Router or placeholder-only components.
 
-## November 2026 review
+Content reflects repository material and project history, not a claim of verified production behavior. Keep credentials and private user records out of source. Mechanical projects are excluded from the showcase.
 
-Fixed an outdated single-project catalog, unsupported completed labels, generic GitHub URLs, placeholder contact email, missing industrial experience, stale Genetic Playground positioning and an empty screenshot panel. Added eight project summaries, shared detail rendering, updated profile and metadata, keyboard focus, skip navigation and reduced-motion support.
-
-Remaining: replace the unused `src/` scaffold in a separate cleanup; collect real product screenshots; verify current public deployment and product flows before labeling them live or production ready. No measured business impact, clinical validity or trading performance is inferred.
+Deployment uses the existing Vercel project connected to GitHub `main`.
