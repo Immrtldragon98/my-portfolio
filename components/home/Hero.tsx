@@ -18,7 +18,7 @@ export default function Hero() {
         </p>
         <div className="button-row">
           <Button href="/projects">
-            Explore projects <span aria-hidden="true">↗</span>
+            Explore projects <span aria-hidden="true">→</span>
           </Button>
           <Button href="/about" secondary>
             My journey →

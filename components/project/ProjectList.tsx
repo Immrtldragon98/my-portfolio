@@ -37,7 +37,7 @@ export default function ProjectList({ items }: { items: Project[] }) {
                 href={p.repo}
                 aria-label={`${p.title} source on GitHub`}
               >
-                Source ↗
+                Source →
               </a>
             )}
           </div>

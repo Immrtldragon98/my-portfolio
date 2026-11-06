@@ -8,7 +8,7 @@ export default function CTA() {
           <h2>See what takes shape next.</h2>
           <p>Explore the code, the decisions, and the work in progress.</p>
         </div>
-        <Button href="https://github.com/logan9e7">Find me on GitHub ↗</Button>
+        <Button href="https://github.com/logan9e7">Find me on GitHub →</Button>
       </div>
     </section>
   );

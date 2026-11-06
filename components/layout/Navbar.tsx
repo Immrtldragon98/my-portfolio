@@ -44,7 +44,7 @@ export default function Navbar() {
           className="button button-secondary nav-github"
           href="https://github.com/logan9e7"
         >
-          GitHub ↗
+          GitHub →
         </a>
         <button
           className="menu-button"
@@ -52,7 +52,7 @@ export default function Navbar() {
           aria-controls="mobile-navigation"
           onClick={() => setOpen(!open)}
         >
-          {open ? "Close ✕" : "Menu ☰"}
+          {open ? "Close" : "Menu"}
         </button>
       </nav>
       {open && (
@@ -82,7 +82,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a href="https://github.com/logan9e7">GitHub ↗</a>
+          <a href="https://github.com/logan9e7">GitHub →</a>
         </nav>
       )}
     </header>

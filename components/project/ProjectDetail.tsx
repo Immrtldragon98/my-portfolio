@@ -20,7 +20,7 @@ export default function ProjectDetail({ project: p }: { project: Project }) {
         </div>
         {p.repo && (
           <div className="button-row">
-            <Button href={p.repo}>Explore source ↗</Button>
+            <Button href={p.repo}>Explore source →</Button>
           </div>
         )}
       </div>

@@ -12,7 +12,7 @@ export default function Footer() {
         <nav aria-label="Footer navigation">
           <Link href="/projects">Projects</Link>
           <Link href="/about">About</Link>
-          <a href="https://github.com/logan9e7">GitHub ↗</a>
+          <a href="https://github.com/logan9e7">GitHub →</a>
         </nav>
         <span className="footer-year">© {new Date().getFullYear()}</span>
       </div>
