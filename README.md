@@ -27,3 +27,13 @@ Unused `src/` app, empty components, template assets, directory dump and unused 
 Content reflects repository material and project history, not a claim of verified production behavior. Keep credentials and private user records out of source. Mechanical projects are excluded from the showcase.
 
 Deployment uses the existing Vercel project connected to GitHub `main`.
+
+## Project presentation
+
+Keep `filters` and `featured` in `data/projects.ts` up to date. These fields drive
+category counts, filtering, and the homepage selection without slug-specific UI
+rules. Search matches the project name, summary, category, and technology stack.
+Filters are independent toggle buttons, not ARIA tabs; route navigation uses links.
+Keep project status separate from deployment status and verify a live URL before
+adding a demo action. Asset Tracking Intelligence is included as a software/data
+workflow project; no mechanical fabrication or commissioning projects are listed.

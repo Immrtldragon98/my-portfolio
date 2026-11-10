@@ -728,3 +728,20 @@ p {
     transform: none;
   }
 }
+
+/* Shared controls keep project browsing compact on every screen. */
+.explorer-toolbar { display: grid; gap: 24px; }
+.project-search { display: grid; gap: 8px; max-width: 420px; font-size: 13px; color: var(--muted); }
+.project-search input { width: 100%; min-height: 48px; border: 1px solid #b6c5cc; border-radius: 10px; background: white; color: var(--foreground); padding: 12px 16px; font: inherit; }
+.filter-button { display: inline-flex; align-items: center; gap: 10px; }
+.filter-count { font-size: 11px; opacity: .8; font-variant-numeric: tabular-nums; }
+.empty-state { padding: 48px 24px; text-align: center; border: 1px dashed #b6c5cc; border-radius: 16px; }
+.empty-state h2 { font-size: 24px; }
+.empty-state p { color: var(--muted); margin: 12px 0 24px; }
+.project-card:focus-within { border-color: var(--accent); }
+.card-actions { flex-wrap: wrap; }
+.button:active { transform: translateY(0); }
+.focus-card { box-shadow: 0 16px 48px #16232c08; }
+.hero { background-image: radial-gradient(ellipse at top right, #d9eae340, transparent 65%); }
+
+.detail-navigation { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }

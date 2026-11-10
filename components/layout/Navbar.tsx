@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const links = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
@@ -10,6 +10,26 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const mobileNavigation = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    mobileNavigation.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    const desktop = window.matchMedia("(min-width: 641px)");
+    const closeOnDesktop = () => { if (desktop.matches) setOpen(false); };
+    document.addEventListener("keydown", closeOnEscape);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
+  }, [open]);
   return (
     <header className="site-header">
       <nav className="nav-shell" aria-label="Main navigation">
@@ -48,6 +68,8 @@ export default function Navbar() {
         </a>
         <button
           className="menu-button"
+          ref={menuButton}
+          type="button"
           aria-expanded={open}
           aria-controls="mobile-navigation"
           onClick={() => setOpen(!open)}
@@ -58,11 +80,9 @@ export default function Navbar() {
       {open && (
         <nav
           id="mobile-navigation"
+          ref={mobileNavigation}
           className="mobile-nav"
           aria-label="Mobile navigation"
-          onKeyDown={(e) => {
-            if (e.key === "Escape") setOpen(false);
-          }}
         >
           {links.map((link) => (
             <Link

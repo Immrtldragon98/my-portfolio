@@ -1,4 +1,9 @@
+export const projectFilters = ["All projects", "Web apps", "AI / ML", "Trading", "Concepts"] as const;
+export type ProjectFilter = (typeof projectFilters)[number];
+
 export type Project = {
+  filters: Exclude<ProjectFilter, "All projects">[];
+  featured?: boolean;
   slug: string;
   title: string;
   category: string;
@@ -15,6 +20,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "market-memory",
+    filters: ["Trading"],
+    featured: true,
     title: "Market Memory Pro",
     category: "Trading systems",
     status: "Active development",
@@ -35,6 +42,8 @@ export const projects: Project[] = [
   },
   {
     slug: "humanos",
+    filters: ["AI / ML"],
+    featured: true,
     title: "HumanOS",
     category: "Applied AI / ML",
     status: "Active development",
@@ -55,6 +64,8 @@ export const projects: Project[] = [
   },
   {
     slug: "hypeframe",
+    filters: ["Web apps"],
+    featured: true,
     title: "Hypeframe",
     category: "Consumer product",
     status: "Active development",
@@ -75,6 +86,8 @@ export const projects: Project[] = [
   },
   {
     slug: "minime-lab",
+    filters: ["Web apps"],
+    featured: true,
     title: "MiniMe Lab",
     category: "Educational product",
     status: "Prototype / active build",
@@ -95,12 +108,13 @@ export const projects: Project[] = [
   },
   {
     slug: "asset-intelligence",
+    filters: ["Web apps"],
     title: "Asset Tracking Intelligence",
-    category: "Industrial software",
+    category: "Data & workflow applications",
     status: "Active development",
     summary:
       "A maintenance-focused software project connecting equipment records with clearer operational workflows.",
-    stack: ["Maintenance workflows", "Asset records", "UI / UX"],
+    stack: ["Asset data", "Workflow design", "UI / UX"],
     problem:
       "Equipment history is harder to use when maintenance records and operational views are fragmented.",
     work: [
@@ -115,6 +129,7 @@ export const projects: Project[] = [
   },
   {
     slug: "dot-space",
+    filters: ["Concepts"],
     title: "Dot Space",
     category: "Product exploration",
     status: "Concept",

@@ -2,9 +2,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import ProjectDetail from "@/components/project/ProjectDetail";
 export function generateStaticParams() {
-  return projects
-    .filter((p) => p.slug !== "market-memory")
-    .map((p) => ({ slug: p.slug }));
+  return projects.map((p) => ({ slug: p.slug }));
 }
 export async function generateMetadata({
   params,

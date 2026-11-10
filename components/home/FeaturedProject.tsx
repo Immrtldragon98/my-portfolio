@@ -14,7 +14,7 @@ export default function FeaturedProject() {
             All projects →
           </Button>
         </div>
-        <ProjectList items={projects.slice(0, 4)} />
+        <ProjectList items={projects.filter((project) => project.featured)} />
       </div>
     </section>
   );

@@ -9,12 +9,9 @@ export default function Button({
   children: ReactNode;
   secondary?: boolean;
 }) {
-  return (
-    <Link
-      className={`button ${secondary ? "button-secondary" : "button-primary"}`}
-      href={href}
-    >
-      {children}
-    </Link>
-  );
+  const className = `button ${secondary ? "button-secondary" : "button-primary"}`;
+  if (/^https?:\/\//.test(href)) {
+    return <a className={className} href={href}>{children}</a>;
+  }
+  return <Link className={className} href={href}>{children}</Link>;
 }

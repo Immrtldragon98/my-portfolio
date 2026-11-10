@@ -3,11 +3,11 @@ import type { Project } from "@/data/projects";
 export default function ProjectList({ items }: { items: Project[] }) {
   return (
     <div className="project-grid">
-      {items.map((p, index) => (
+      {items.map((p) => (
         <article className="project-card" key={p.slug}>
           <div className="card-top">
             <span className="project-number">
-              {String(index + 1).padStart(2, "0")}
+              {p.filters.join(" / ")}
             </span>
             <span className="status-badge">
               {p.status === "Concept"
@@ -28,7 +28,7 @@ export default function ProjectList({ items }: { items: Project[] }) {
             ))}
           </div>
           <div className="card-actions">
-            <Link className="text-action" href={`/projects/${p.slug}`}>
+            <Link className="button button-secondary" href={`/projects/${p.slug}`}>
               View project <span aria-hidden="true">→</span>
             </Link>
             {p.repo && (

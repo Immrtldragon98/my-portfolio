@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import type { Project } from "@/data/projects";
+import { projects, type Project } from "@/data/projects";
 export default function ProjectDetail({ project: p }: { project: Project }) {
   return (
     <main id="main-content" className="page-shell page-content">
@@ -55,9 +55,12 @@ export default function ProjectDetail({ project: p }: { project: Project }) {
         history. Current production behavior has not been independently
         verified.
       </p>
-      <Button href="/projects" secondary>
-        Back to projects →
-      </Button>
+      <nav className="detail-navigation" aria-label="More projects">
+        <Button href="/projects" secondary>All projects</Button>
+        <Button href={`/projects/${projects[(projects.findIndex((item) => item.slug === p.slug) + 1) % projects.length].slug}`} secondary>
+          Next project →
+        </Button>
+      </nav>
     </main>
   );
 }
